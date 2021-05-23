@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="jpa" name="JPA">
+      <configuration>
+        <setting name="validation-enabled" value="true" />
+        <datasource-mapping />
+        <naming-strategy-map />
+        <deploymentDescriptor name="persistence.xml" url="file://$MODULE_DIR$/src/META-INF/persistence.xml" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="JPA 2.2-2.2" level="project" />
+    <orderEntry type="library" name="eclipselink" level="application" />
+    <orderEntry type="library" name="fontawesomefx-commons-9.1.2" level="application" />
+    <orderEntry type="library" name="fontawesomefx-fontawesome-4.7.0-9.1.2" level="application" />
+    <orderEntry type="library" name="javaFx-15" level="application" />
+    <orderEntry type="library" name="javaFx-16" level="application" />
+    <orderEntry type="library" name="jfoenix-9.0.10" level="application" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.24" level="application" />
+  </component>
+</module>

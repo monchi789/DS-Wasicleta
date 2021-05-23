@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="508.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.RentalSelectorController">
+   <children>
+      <Label contentDisplay="CENTER" prefHeight="17.0" text="Selecciona el tipo de usuario">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="800.0" spacing="100.0">
+         <children>
+             <Pane fx:id="panel1" maxHeight="350.0" maxWidth="250.0" onMouseClicked="#NewUser" prefHeight="350.0" prefWidth="250.0" stylesheets="@CSS/RentalSelectorStyling.css">
+                 <children>
+                     <Pane fx:id="icon1" layoutX="25.0" layoutY="28.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS/RentalSelectorStyling.css">
+                         <children>
+                             <ImageView fitHeight="143.0" fitWidth="122.0" layoutX="44.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../Resources/1.png" />
+                                 </image>
+                             </ImageView>
+                         </children>
+                     </Pane>
+                     <Label layoutX="41.0" layoutY="279.0" text="Nuevo Usuario" textFill="WHITE">
+                         <font>
+                             <Font name="System Bold" size="20.0" />
+                         </font>
+                         <graphic>
+                             <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="25" />
+                         </graphic>
+                     </Label>
+                 </children>
+             </Pane>
+             <Pane fx:id="panel2" maxHeight="350.0" maxWidth="250.0" onMouseClicked="#FrequentUser" prefHeight="350.0" prefWidth="250.0" stylesheets="@CSS/RentalSelectorStyling.css">
+                 <children>
+                     <Label layoutX="26.0" layoutY="285.0" text="Usuario Frecuente" textFill="WHITE">
+                         <font>
+                             <Font name="System Bold" size="20.0" />
+                         </font>
+                         <graphic>
+                             <FontAwesomeIconView fill="WHITE" glyphName="CHECK" size="25" />
+                         </graphic>
+                     </Label>
+                     <Pane fx:id="icon2" layoutX="25.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@CSS/RentalSelectorStyling.css">
+                         <children>
+                             <ImageView fitHeight="139.0" fitWidth="138.0" layoutX="43.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../Resources/2.png" />
+                                 </image>
+                             </ImageView>
+                         </children>
+                     </Pane>
+                 </children>
+             </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

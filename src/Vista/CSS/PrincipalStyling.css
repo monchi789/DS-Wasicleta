@@ -1,0 +1,61 @@
+.toggle-button{
+    -fx-background-color: #0cbec4;
+}
+.toggle-button:hover{
+    -fx-background-color: linear-gradient(to right top, #53e7a1, #3bd3d7);
+}
+.toggle-button:pressed{
+    -fx-background-color: linear-gradient(to right top, #51cd94, #38c6ca);
+}
+.toggle-button:selected{
+    -fx-background-color: linear-gradient(to right top, #57e9a1, #3dd5d9);
+}
+#btnMinimizeWindow{
+    -fx-background-color: #e5c140;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+#btnMinimizeWindow:hover{
+    -fx-background-color: #d0bb6a;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#btnMaximizeWindow{
+    -fx-background-color: #fff421;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+#btnMaximizeWindow:hover{
+    -fx-background-color: #e7e08f;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#btnCloseWindow{
+    -fx-background-color: #e54040;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+#btnCloseWindow:hover{
+    -fx-background-color: #e55a5a;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+#btnLogOut{
+    -fx-background-color: linear-gradient(to right top, #0ED786, #0cbec4);
+    -fx-border-color: WHITE;
+    -fx-border-width: 2;
+
+}
+#btnLogOut:hover{
+    -fx-background-color: linear-gradient(to right top, #53e7a1, #3bd3d7);
+    -fx-border-color: WHITE;
+    -fx-border-width: 2;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}

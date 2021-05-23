@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="338.0" spacing="20.0" style="-fx-border-color: linear-gradient(to left , #4dfcaa, #53e7a1, #0cbec4); -fx-border-width: 2;" stylesheets="@../CSS/CRUDStyling.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.CRUDControllers.RolCRUDController">
+   <children>
+      <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to left , #4dfcaa, #53e7a1, #0cbec4);">
+         <VBox.margin>
+            <Insets left="-20.0" right="-20.0" top="-20.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="btnCloseWindow" layoutX="308.0" layoutY="2.0" mnemonicParsing="false" onAction="#CloseWindow" prefHeight="20.0" prefWidth="20.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="10" />
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Label text="Registro de Roles">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <GridPane vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="95.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="203.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="ID Rol :" />
+            <Label text="Tipo Rol :" GridPane.rowIndex="1" />
+            <JFXTextField fx:id="txtIdRol" alignment="CENTER" focusColor="#0cbec4" promptText="Autogenerado" GridPane.columnIndex="1" />
+            <JFXTextField fx:id="txtTipoRol" focusColor="#0cbec4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="41.0" prefWidth="298.0" spacing="50.0">
+         <children>
+            <JFXButton fx:id="btnAceptar" defaultButton="true" onAction="#Aceptar" prefHeight="40.0" prefWidth="100.0" text="Aceptar" />
+            <JFXButton fx:id="btnCancelar" cancelButton="true" onAction="#Cancelar" prefHeight="40.0" prefWidth="100.0" text="Cancelar" />
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

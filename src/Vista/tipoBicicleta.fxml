@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="388.0" prefWidth="428.0" spacing="10.0" style="-fx-border-color: linear-gradient(to left , #4dfcaa, #53e7a1, #0cbec4); -fx-border-width: 2;" stylesheets="@CSS/BicycleStyling.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.TipoBicicletaController">
+   <children>
+      <Pane prefHeight="30.0" prefWidth="471.0" style="-fx-background-color: linear-gradient(to left , #4dfcaa, #53e7a1, #0cbec4);">
+         <VBox.margin>
+            <Insets left="-5.0" right="-5.0" top="-10.0" />
+         </VBox.margin>
+         <children>
+            <Button fx:id="btnCloseWindow" layoutX="399.0" layoutY="3.0" mnemonicParsing="false" onAction="#CloseWindow" prefHeight="20.0" prefWidth="20.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="10" />
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Label text="./Bicicletas/Tipos" textFill="#686868">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <padding>
+            <Insets left="-200.0" />
+         </padding>
+      </Label>
+      <HBox alignment="CENTER" spacing="20.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <JFXButton fx:id="btnNew" graphicTextGap="8.0" onAction="#NewT" prefHeight="20.0" prefWidth="110.0" text="Nuevo">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEdit" graphicTextGap="8.0" onAction="#EditT" prefHeight="20.0" prefWidth="110.0" text="Editar">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="PENCIL" size="20" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnDelete" graphicTextGap="8.0" onAction="#DeleteT" prefHeight="20.0" prefWidth="110.0" text="Eliminar">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="TIMES" size="20" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+      <TableView fx:id="tblTipoBicicleta" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="461.0" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="colIdTipoBicicleta" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colNombreTipoBicicleta" maxWidth="300.0" minWidth="200.0" prefWidth="200.0" text="Tipo de Bicicleta" />
+            <TableColumn fx:id="colPrecioBicicleta" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Precio" />
+         </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+   </padding>
+</VBox>

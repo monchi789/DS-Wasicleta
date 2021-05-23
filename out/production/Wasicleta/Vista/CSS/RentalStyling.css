@@ -1,0 +1,55 @@
+#VboxA{
+    -fx-border-color:  linear-gradient(to right top, #0ED786, #0cbec4);
+    -fx-border-radius: 20;
+    -fx-border-width: 5;
+    -fx-border-style: DASHED;
+}
+#VboxB{
+    -fx-border-color:  linear-gradient(to right top, #0ED786, #0cbec4);
+    -fx-border-radius: 20;
+    -fx-border-width: 5;
+    -fx-border-style: DASHED;
+}
+/*===================================================================================*/
+#btnCloseWindow{
+    -fx-background-color: #e54040;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+}
+#btnCloseWindow:hover{
+    -fx-background-color: #e55a5a;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+/*===================================================================================*/
+#btnRental{
+    -fx-background-color: linear-gradient(to right top, #0ED786, #0cbec4);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 32;
+}
+#btnRental:hover{
+    -fx-background-color: linear-gradient(to right top, #53e7a1, #3bd3d7);
+    -fx-border-radius: 20;
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}
+/*===================================================================================*/
+#btnBuscar{
+    -fx-background-color: linear-gradient(to right top, #0ED786, #0cbec4);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+#btnBuscar:hover{
+    -fx-background-color: linear-gradient(to right top, #53e7a1, #3bd3d7);
+    -fx-border-radius: 20;
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}

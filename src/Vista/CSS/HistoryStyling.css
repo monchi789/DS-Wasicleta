@@ -1,0 +1,31 @@
+.table-view .column-header .label{
+    -fx-text-fill: WHITE;                /* CAMBIAR EL COLOR DE LOS TITULOS DE COLUMNAS */
+    -fx-alignment: CENTER;
+}
+.table-view .column-header:hover {
+    -fx-background-color: linear-gradient(to right , #53e7a1, #3bd3d7);       /* SOMREADO CUANDO PASA EL CURSOS */
+}
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: #0cbec4;       /* CAMBIAR COLOR DE FONDO DE LOS TITULOS DE COLUMNAS*/
+    -fx-size: 40;                        /* ANCHO DE L TITULO HEADER */
+    -fx-border-color: WHITE;              /* COLOR DE BORDER TITULO HEADER */
+    -fx-border-width: 0 0 0 0;           /* TAMAÑO DEL BORDER HEADER */
+}
+.table-view{
+    -fx-background-color: WHITE;
+    -fx-background-radius: 20;
+}
+#btnActualizar{
+    -fx-background-color: linear-gradient(to right top, #0ED786, #0cbec4);
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+#btnActualizar:hover{
+    -fx-background-color: linear-gradient(to right top, #53e7a1, #3bd3d7);
+    -fx-border-radius: 20;
+    -fx-scale-y: 1.1;
+    -fx-scale-x: 1.1;
+}

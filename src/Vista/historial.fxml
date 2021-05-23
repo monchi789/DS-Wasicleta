@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="571.0" prefWidth="1367.0" spacing="10.0" stylesheets="@CSS/HistoryStyling.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.HistorialController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+   </padding>
+   <children>
+      <HBox prefHeight="108.0" prefWidth="710.0">
+         <children>
+            <GridPane alignment="TOP_RIGHT" hgap="20.0" maxHeight="1.7976931348623157E308" prefHeight="108.0" prefWidth="628.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="256.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="143.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nombre :" GridPane.rowIndex="1" />
+                  <Label prefHeight="35.0" prefWidth="132.0" text="Busquedas">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#Buscar" prefHeight="30.0" prefWidth="37.0" stylesheets="@CSS/RentalStyling.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+                     </graphic>
+                  </Button>
+                  <JFXTextField fx:id="txtNombreBuscar" focusColor="#38cdc8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="btnActualizar" mnemonicParsing="false" onAction="#Actualizar" prefHeight="30.0" prefWidth="37.0" stylesheets="@CSS/RentalStyling.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="RETWEET" size="20" />
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <TableView fx:id="tblHistorial" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="438.0" prefWidth="962.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="colIdAlquiler" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="colCodigoAlquiler" maxWidth="500.0" minWidth="100.0" prefWidth="100.0" text="Codigo" />
+            <TableColumn fx:id="colFechaAlquiler" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" text="Fecha" />
+            <TableColumn fx:id="coltrabajadorAlquiler" maxWidth="300.0" minWidth="100.0" prefWidth="100.0" text="Trabajador" />
+            <TableColumn fx:id="colBicicletaAlquiler" maxWidth="150.0" minWidth="100.0" prefWidth="100.0" text="Bicicleta" />
+          <TableColumn fx:id="colNombreAlquiler" maxWidth="400.0" minWidth="150.0" prefWidth="150.0" text="Nombre" />
+            <TableColumn fx:id="colApellidoAlquiler" maxWidth="400.0" minWidth="150.0" prefWidth="150.0" text="Apellido" />
+            <TableColumn fx:id="colNumeroDocumentoAlquiler" maxWidth="80.0" minWidth="80.0" text="DNI" />
+            <TableColumn fx:id="colCelularAlquiler" maxWidth="80.0" minWidth="80.0" text="Celular" />
+            <TableColumn fx:id="colCorreoAlquiler" minWidth="200.0" prefWidth="200.0" text="Correo" />
+            <TableColumn fx:id="colMontoAlquiler" prefWidth="75.0" text="Monto" />
+        </columns>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TableView>
+   </children>
+</VBox>
