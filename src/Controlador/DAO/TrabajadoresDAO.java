@@ -1,5 +1,6 @@
 package Controlador.DAO;
 
+import Modelo.Reporte.ReporteTrabajador;
 import Modelo.Repositorio.Persistencia;
 import Modelo.Rol;
 import Modelo.Trabajador;
@@ -15,6 +16,14 @@ public class TrabajadoresDAO {
     public static List<Trabajador> listarTrabajadores(){
         Query consulta = em.createNamedQuery("trabajador.listar");
         return  consulta.getResultList();
+    }
+
+    public static List<ReporteTrabajador> listarReporteTrabajador(){
+
+        Query consulta = em.createNamedQuery("trabajador.listaTipoTrabajador");
+        List<ReporteTrabajador> salida = consulta.getResultList();
+        return salida;
+
     }
 
     public static Trabajador buscarUsuario(String usuarioTrabajador){

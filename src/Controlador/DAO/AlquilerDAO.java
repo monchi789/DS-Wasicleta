@@ -1,6 +1,8 @@
 package Controlador.DAO;
 
 import Modelo.*;
+import Modelo.Reporte.ReporteAlquiler;
+import Modelo.Reporte.ReporteTrabajador;
 import Modelo.Repositorio.Persistencia;
 
 import javax.persistence.EntityManager;
@@ -20,6 +22,15 @@ public class AlquilerDAO {
         consulta.setParameter("nombre", nombre);
         return consulta.getResultList();
     }
+
+    public static List<ReporteAlquiler> listarReporteAlquiler(){
+
+        Query consulta = em.createNamedQuery("alquiler.listarReporteAlquiler");
+        List<ReporteAlquiler> salida = consulta.getResultList();
+        return salida;
+
+    }
+
 
     public static void crear(Alquiler nuevoAlquiler) {
         em.getTransaction().begin();

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="541.0" prefWidth="913.0" spacing="10.0" stylesheets="@CSS/WorkersStyling.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.TrabajadoresController">
+<VBox prefHeight="541.0" prefWidth="913.0" spacing="10.0" stylesheets="@CSS/WorkersStyling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.TrabajadoresController">
    <children>
       <HBox>
          <children>
@@ -47,10 +47,18 @@
             </GridPane>
             <HBox alignment="CENTER_RIGHT" HBox.hgrow="ALWAYS">
                <children>
+                  <JFXButton fx:id="btnReporteTrabajador" graphicTextGap="8.0" onAction="#reporteTrabajador" prefHeight="42.0" prefWidth="151.0" text="Reporte">
+                     <graphic>
+                        <FontAwesomeIconView fx:id="reporteTrabajador" fill="WHITE" glyphName="BARS" size="20" text="" />
+                     </graphic>
+                  </JFXButton>
                   <JFXButton fx:id="btnRol" graphicTextGap="8.0" onAction="#Roles" prefHeight="42.0" prefWidth="151.0" text="Roles">
                      <graphic>
                         <FontAwesomeIconView fill="WHITE" glyphName="BARS" size="20" text="" />
                      </graphic>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
                   </JFXButton>
                </children>
                <padding>

@@ -7,7 +7,8 @@ import java.time.LocalDate;
 @Table(name = "alquiler")
 @NamedQueries({
         @NamedQuery(name = "alquiler.listar", query = "select a from Alquiler a"),
-        @NamedQuery(name = "alquiler.busqueda", query = "select a from Alquiler a where a.nombreAlquiler like :nombre")
+        @NamedQuery(name = "alquiler.busqueda", query = "select a from Alquiler a where a.nombreAlquiler like :nombre"),
+        @NamedQuery(name = "alquiler.listarReporteAlquiler", query = "select new Modelo.Reporte.ReporteAlquiler(a.idAlquiler, a.nombreAlquiler, a.apellidoAlquiler, a.celularAlquiler,  a.correoAlquiler, a.numeroDocumentoAlquiler, b.codigoBicicleta, a.codigo, a.fechaAlquiler, a.montoAlquiler,  c.nombreCliente, t.nombreTrabajador) from Alquiler a join Cliente c on a.perteneceCliente = c join Trabajador t on a.perteneceTrabajador = t join Bicicleta b on a.tieneBicicleta = b")
 })
 public class Alquiler {
     @Id

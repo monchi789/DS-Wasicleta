@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="508.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.RentalSelectorController">
+<VBox alignment="CENTER" prefHeight="508.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.Vista.RentalSelectorController">
    <children>
       <Label contentDisplay="CENTER" prefHeight="17.0" text="Selecciona el tipo de usuario">
          <font>
@@ -66,5 +67,6 @@
              </Pane>
          </children>
       </HBox>
+      <JFXButton fx:id="btnReporteAlquiler" graphicTextGap="8.0" onAction="#ReporteAlquiler" prefHeight="42.0" prefWidth="151.0" stylesheets="@CSS/RentalSelectorStyling.css" text="Reporte" />
    </children>
 </VBox>

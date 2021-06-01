@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Wasicleta">
+    <output-path>$PROJECT_DIR$/out/artifacts/Wasicleta</output-path>
+    <root id="archive" name="Wasicleta.jar">
+      <element id="module-output" name="Wasicleta" />
+    </root>
+  </artifact>
+</component>

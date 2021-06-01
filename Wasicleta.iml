@@ -25,5 +25,6 @@
     <orderEntry type="library" name="javaFx-16" level="application" />
     <orderEntry type="library" name="jfoenix-9.0.10" level="application" />
     <orderEntry type="library" name="mysql-connector-java-8.0.24" level="application" />
+    <orderEntry type="library" name="jasperreports-6.17" level="application" />
   </component>
 </module>

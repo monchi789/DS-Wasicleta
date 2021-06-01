@@ -26,16 +26,21 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Callback;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class TrabajadoresController implements Initializable {
 
+    public JFXButton btnReporteTrabajador;
     @FXML
     private JFXButton btnNew;
     @FXML
@@ -175,4 +180,17 @@ public class TrabajadoresController implements Initializable {
         }catch (IOException e){}
     }
 
+    public void reporteTrabajador(ActionEvent actionEvent) {
+
+        try {
+            JasperReport reporteTrabajadores = (JasperReport) JRLoader.loadObject(Objects.requireNonNull(getClass().getResource("/Vista/Reporte/ReporteTrabajador.jasper")));
+            JRBeanCollectionDataSource datos = new JRBeanCollectionDataSource(TrabajadoresDAO.listarReporteTrabajador());
+            JasperPrint jprint = JasperFillManager.fillReport(reporteTrabajadores,null, datos);
+            JasperViewer jviewer = new JasperViewer(jprint);
+            jviewer.setVisible(true);
+        }catch (JRException e){
+            e.printStackTrace();
+        }
+
+    }
 }

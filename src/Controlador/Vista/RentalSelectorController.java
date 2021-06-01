@@ -1,5 +1,8 @@
 package Controlador.Vista;
 
+import Controlador.DAO.AlquilerDAO;
+import Controlador.DAO.TrabajadoresDAO;
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -11,12 +14,22 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class RentalSelectorController implements Initializable {
+    @FXML
+    public JFXButton btnReporteAlquiler;
 
     @FXML
     private Pane panel1;
@@ -72,4 +85,23 @@ public class RentalSelectorController implements Initializable {
             }
         });
     }
+
+    public void ReporteAlquiler(ActionEvent actionEvent) {
+
+        try {
+            JasperReport reporteAlquiler = (JasperReport) JRLoader.loadObject(Objects.requireNonNull(getClass().getResource("/Vista/Reporte/ReporteAlquiler.jasper")));
+            JRBeanCollectionDataSource datos = new JRBeanCollectionDataSource(AlquilerDAO.listarReporteAlquiler());
+            JasperPrint jprint = JasperFillManager.fillReport(reporteAlquiler,null, datos);
+            JasperViewer jviewer = new JasperViewer(jprint);
+            jviewer.setVisible(true);
+        }catch (JRException e){
+            e.printStackTrace();
+        }
+       
+
+    }
+
 }
+
+
+

@@ -8,7 +8,8 @@ import java.util.List;
 @Table(name = "trabajador")
 @NamedQueries({
         @NamedQuery(name = "trabajador.listar", query = "select t from Trabajador t"),
-        @NamedQuery(name = "trabajador.buscar", query = "select t from Trabajador t where t.usuarioTrabajador = :usuarioTrabajador")
+        @NamedQuery(name = "trabajador.buscar", query = "select t from Trabajador t where t.usuarioTrabajador = :usuarioTrabajador"),
+        @NamedQuery(name = "trabajador.listaTipoTrabajador", query = "select new Modelo.Reporte.ReporteTrabajador(t.idTrabajador, t.nombreTrabajador, t.apellidosTrabajador, t.usuarioTrabajador, t.correoTrabajador, t.nroDocumentoTrabajador, t.celularTrabajador,  r.tipoRol) from Trabajador t join Rol r on t.tieneRol = r")
 })
 public class Trabajador {
     @Id
